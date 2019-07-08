@@ -35,8 +35,8 @@ function CollapseMenu(props) {
     uiSchema: {
       collapse: {
         icon: {
-          enabled = "glyphicon glyphicon-chevron-down",
-          disabled = "glyphicon glyphicon-chevron-right",
+          enabled = "fa fa-chevron-up",
+          disabled = "fa fa-chevron-down",
           add = "glyphicon glyphicon-plus-sign",
         } = {},
         separate = true,
