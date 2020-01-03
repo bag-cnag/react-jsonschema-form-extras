@@ -35,7 +35,7 @@ function CollapseMenu(props) {
     uiSchema: {
       collapse: {
         icon: {
-          enabled = "fa fa-chevron-up",
+          enabled = "fa fa-chevron-right",
           disabled = "fa fa-chevron-down",
           add = "glyphicon glyphicon-plus-sign",
         } = {},
@@ -86,13 +86,12 @@ function CollapseMenu(props) {
           cursor: divCursor,
           background,
         }}>
-        <span style={{ color: textColor }}>{title || name}</span>&nbsp;
         {addTo && (
-          <a
+        <a
             onClick={handleAdd}
             style={{ color: addGlyphColor, cursor: addCursor }}>
             <i style={{ cursor: addCursor }} className={add} />
-          </a>
+        </a>
         )}
         <a>
           <i
@@ -100,6 +99,7 @@ function CollapseMenu(props) {
             className={collapsed ? disabled : enabled}
           />
         </a>
+        <span style={{ color: textColor }}>{title || name}</span>&nbsp;
         {actions.map((action, i) => (
           <CollapseMenuAction
             key={i}
